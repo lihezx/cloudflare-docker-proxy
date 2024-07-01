@@ -6,7 +6,18 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  "cloudflare-docker-proxy.lihezx.workers.dev": dockerHub
+  // production
+  "docker.52jiahe.org": dockerHub,
+  "quay.52jiahe.org": "https://quay.io",
+  "gcr.52jiahe.org": "https://gcr.io",
+  "k8s-gcr.52jiahe.org": "https://k8s.gcr.io",
+  "k8s.52jiahe.org": "https://registry.k8s.io",
+  "ghcr.52jiahe.org": "https://ghcr.io",
+  "cloudsmith.52jiahe.org": "https://docker.cloudsmith.io",
+  "ecr.52jiahe.org": "https://public.ecr.aws",
+
+  // staging
+  "docker-staging.52jiahe.org": dockerHub,
 };
 
 function routeByHosts(host) {
